@@ -7,7 +7,9 @@ import (
 
 func say(s string) {
 	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
+		waitingTime := 100 * time.Millisecond
+		fmt.Printf("waiting %s for %s\n", s, waitingTime)
+		time.Sleep(waitingTime)
 		fmt.Println(s)
 	}
 }
